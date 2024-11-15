@@ -43,7 +43,7 @@ bench --site dev.localhost clear-cache
 bench use dev.localhost
 
 # Install Frappe Insights
-bench get-app insights
+bench get-app https://github.com/frappe/insights
 bench --site dev.localhost install-app insights
 
 echo "Frappe Insights installation completed!"
