@@ -47,6 +47,7 @@ mv /workspace/frappe-bench/temp/* /workspace/frappe-bench/sites/dev.localhost/pr
 # Install Frappe Insights
 bench get-app https://github.com/frappe/insights
 bench --site dev.localhost install-app insights
+bench --site dev.localhost --force restore --mariadb-root-password 123 /workspace/frappe-bench/sites/dev.localhost/private/backups/20241118_190300-dev_localhost-database.sql.gz --with-public-files /workspace/frappe-bench/sites/dev.localhost/private/backups/20241118_190300-dev_localhost-files.tar --with-private-files /workspace/frappe-bench/sites/dev.localhost/private/backups/20241118_190300-dev_localhost-private-files.tar
 bench --site dev.localhost migrate
 
 
