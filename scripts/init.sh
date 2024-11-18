@@ -42,9 +42,12 @@ bench new-site dev.localhost \
 bench --site dev.localhost set-config developer_mode 1
 bench --site dev.localhost clear-cache
 bench use dev.localhost
+mv /workspace/frappe-bench/temp/* /workspace/frappe-bench/sites/dev.localhost/private/backups/
 
 # Install Frappe Insights
 bench get-app https://github.com/frappe/insights
 bench --site dev.localhost install-app insights
+bench --site dev.localhost migrate
+
 
 echo "Frappe Insights installation completed!"
